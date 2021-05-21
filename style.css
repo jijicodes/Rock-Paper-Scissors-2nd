@@ -1,0 +1,22 @@
+img {
+  background-size: contain;
+  background-color: rgba(255, 99, 71, 0.2);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  font-size: 3rem;
+}
+
+#reset {
+  display: none;
+}
+
+#reset.visible {
+  display: block;
+}
