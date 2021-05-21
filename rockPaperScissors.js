@@ -39,6 +39,9 @@ let currentScore = emptyScore;
 
 window.addEventListener("DOMContentLoaded", (event) => {
   function playRock() {
+    if (gameIsOver(currentScore)) {
+      return;
+    }
     const computerPick = computerPlay();
     const newScore = playRound("✊", computerPick, currentScore);
     currentScore = newScore;
@@ -48,6 +51,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function playPaper() {
+    if (gameIsOver(currentScore)) {
+      return;
+    }
     const computerPick = computerPlay();
     let newScore = playRound("✋", computerPlay(), currentScore);
     currentScore = newScore;
@@ -57,6 +63,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function playScissors() {
+    if (gameIsOver(currentScore)) {
+      return;
+    }
     const computerPick = computerPlay();
     let newScore = playRound("✌", computerPlay(), currentScore);
     currentScore = newScore;
