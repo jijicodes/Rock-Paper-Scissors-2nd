@@ -1,12 +1,19 @@
-img {
-  background-size: contain;
-  background-color: rgba(255, 99, 71, 0.2);
-}
-
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url("./brick-wall.jpg");
+  background-size: cover;
+}
+body::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  background-color: rgba(198, 176, 210, 0.9);
+  z-index: -1;
 }
 
 .playerButtons {
@@ -22,4 +29,10 @@ body {
 
 #reset.visible {
   display: block;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 3rem;
 }
