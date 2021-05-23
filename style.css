@@ -9,7 +9,10 @@ body {
   justify-content: space-between;
 }
 
-button {
+.playerButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   font-size: 3rem;
 }
 
