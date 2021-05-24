@@ -27,11 +27,21 @@ let emptyScore = [0, 0, 0];
  * @returns {void}
  */
 function updateSelections(userPick, computerPick) {
-  const userSelect = document.querySelector("#userSelect");
-  const computerSelect = document.querySelector("#computerSelect");
-  userSelect && (userSelect.textContent = `You picked ${userPick}`);
-  computerSelect &&
-    (computerSelect.textContent = `Computer picked ${computerPick}`);
+  const simRound = playRound(userPick, computerPick, emptyScore);
+  const userSelectBtn = document.querySelector("#userSelectBtn");
+  const computerSelectBtn = document.querySelector("#computerSelectBtn");
+  if (userSelectBtn) {
+    userSelectBtn.textContent = userPick;
+    userSelectBtn.classList.remove("win", "loss");
+    simRound[0] !== simRound[1] &&
+      userSelectBtn.classList.add(simRound[0] ? "win" : "loss");
+  }
+  if (computerSelectBtn) {
+    computerSelectBtn.textContent = computerPick;
+    computerSelectBtn.classList.remove("win", "loss");
+    simRound[0] !== simRound[1] &&
+      computerSelectBtn.classList.add(simRound[1] ? "win" : "loss");
+  }
 }
 
 /**

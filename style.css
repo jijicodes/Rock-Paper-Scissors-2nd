@@ -1,9 +1,15 @@
+@font-face {
+  font-family: "penstriped";
+  src: url("./assets/Penstriped.ttf.woff") format("woff");
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-image: url("./brick-wall.jpg");
   background-size: cover;
+  font-family: "penstriped", cursive;
 }
 body::before {
   position: absolute;
@@ -16,11 +22,49 @@ body::before {
   z-index: -1;
 }
 
+p {
+  font-size: 49px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px;
+  margin: 46px;
+}
+
 .playerButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   font-size: 3rem;
+  padding: 50px;
+  margin: 46px;
+}
+
+.selectBoard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.pickCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectIcon {
+  font-size: 49px;
+  padding: 30px;
+  border-radius: 3px;
+  margin-top: 50px;
+}
+
+.selectIcon.win {
+  background-color: green;
+}
+
+.selectIcon.loss {
+  background-color: red;
 }
 
 #reset {
