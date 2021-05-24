@@ -1,5 +1,5 @@
 /**
- * @typedef {"✊" | "✋" | "✌"} SelectionOption
+ * @typedef {"✊" | "✋" | "✌️"} SelectionOption
  * @typedef {[number, number, number]} Score
  */
 
@@ -13,7 +13,7 @@ function computerPlay() {
 /**
  * @type {[SelectionOption,SelectionOption, SelectionOption]}
  */
-let items = ["✊", "✋", "✌"];
+let items = ["✊", "✋", "✌️"];
 
 /**
  * @type {Score}
@@ -55,9 +55,9 @@ function playRound(userSelection, computerSelection, score) {
   if (userSelection == computerSelection) {
     return [score[0], score[1], score[2] + 1];
   } else if (
-    (userSelection == "✌" && computerSelection == "✋") ||
+    (userSelection == "✌️" && computerSelection == "✋") ||
     (userSelection == "✋" && computerSelection == "✊") ||
-    (userSelection == "✊" && computerSelection == "✌")
+    (userSelection == "✊" && computerSelection == "✌️")
   ) {
     return [score[0] + 1, score[1], score[2]];
   } else {
@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const scissors = document.querySelector("#scissors button");
   rock?.addEventListener("click", () => rockPaperScissors("✊"));
   paper?.addEventListener("click", () => rockPaperScissors("✋"));
-  scissors?.addEventListener("click", () => rockPaperScissors("✌"));
+  scissors?.addEventListener("click", () => rockPaperScissors("✌️"));
 
   const gameOver = document.querySelector("#reset");
   gameOver?.addEventListener("click", function () {
