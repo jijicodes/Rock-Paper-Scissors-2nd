@@ -42,6 +42,15 @@ function updateSelections(userPick, computerPick) {
     simRound[0] !== simRound[1] &&
       computerSelectBtn.classList.add(simRound[1] ? "win" : "loss");
   }
+
+  document
+    .getElementById("favicon")
+    ?.setAttribute(
+      "href",
+      `./assets/${
+        userPick === "✊" ? "rock" : userPick === "✋" ? "paper" : "scissors"
+      }.ico`
+    );
 }
 
 /**

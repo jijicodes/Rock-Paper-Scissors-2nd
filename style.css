@@ -59,9 +59,12 @@ p {
   font-size: 80px;
   padding: 15px;
   border-radius: 3px;
-  margin-top: 50px;
+  margin-top: 20px;
   background-color: rgba(242, 242, 242, 0);
   transition: background-color 0.25s;
+  height: 100px;
+  width: 100px;
+  text-align: center;
 }
 
 .selectIcon.win {
