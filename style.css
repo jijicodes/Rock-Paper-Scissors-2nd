@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("./brick-wall.jpg");
+  background-image: url("./assets/brick-wall.jpg");
   background-size: cover;
   font-family: "penstriped", cursive;
 }
@@ -23,48 +23,53 @@ body::before {
 }
 
 p {
-  font-size: 49px;
+  font-size: 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 50px;
-  margin: 46px;
+}
+
+#instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .playerButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-size: 3rem;
-  padding: 50px;
-  margin: 46px;
 }
 
 .selectBoard {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  font-size: 50px;
 }
 
 .pickCol {
+  font-size: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .selectIcon {
-  font-size: 49px;
-  padding: 30px;
+  font-size: 80px;
+  padding: 15px;
   border-radius: 3px;
   margin-top: 50px;
+  background-color: rgba(242, 242, 242, 0);
+  transition: background-color 0.25s;
 }
 
 .selectIcon.win {
-  background-color: green;
+  background-color: rgba(146, 218, 121, 1);
 }
 
 .selectIcon.loss {
-  background-color: red;
+  background-color: rgba(240, 134, 134, 1);
 }
 
 #reset {
@@ -73,10 +78,48 @@ p {
 
 #reset.visible {
   display: block;
+  font-family: "penstriped";
+  font-size: 40px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
-button {
+.playerButtons button {
   border-radius: 5px;
-  padding: 10px;
-  font-size: 3rem;
+  font-size: 10rem;
+  padding: 30px;
+  margin: 46px;
+  box-shadow: 5px 5px 5px black;
+}
+button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+button:active {
+  box-shadow: 0 0 0 transparent;
+}
+
+#scoreEl {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  line-height: 70px;
+  padding: 50px 100px;
+}
+
+#scoreEl .scoreBox div {
+  background-color: whitesmoke;
+  padding: 10px 60px;
+  border: 1px solid black;
+  border-right-width: 0;
+}
+
+#scoreEl .scoreBox .lastScoreBox {
+  border-right-width: 1px;
+}
+
+#scoreEl span {
+  text-align: center;
+  display: block;
 }

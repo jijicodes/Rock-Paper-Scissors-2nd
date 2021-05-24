@@ -10,7 +10,12 @@
 
   <body>
     <title>Rock Paper Scissor Shoot</title>
+    
     <p>LETS PLAY GAME!</p>
+    <div id="instruction">
+    <p1>THE PLAYER WHO GETS THE FIRST 3 POINTS WINS! </p1>
+    <p2>NOW BEGIN THE GAME BY CLICKING THE BUTTONS BELOW</p2>
+  </div>
 <section class="playerButtons">
     <div id="rock">
       <button type="button">✊</button>
@@ -34,11 +39,21 @@
     </section>
 
     <div id="scoreEl">
-      <div id="win"></div>
-      <div id="loss"></div>
-      <div id="tied"></div>
+      <div class="scoreBox">
+         <span>WIN</span> 
+            <div id="win">0</div>
+      </div>
+
+      <div class="scoreBox">
+        <span>LOSS</span>
+      <div id="loss">0</div>
+      </div>
+      <div class="scoreBox">
+        <span>TIED</span>
+      <div id="tied" class="lastScoreBox">0</div>
     </div>
-    <button id="reset" type="button">Start Over</button>
+    </div>
+    <button id="reset" type="button">START OVER</button>
 
   </body>
   </html>

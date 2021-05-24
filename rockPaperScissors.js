@@ -108,9 +108,9 @@ function displayResults(newScore) {
   const loss = document.querySelector("#loss");
   const tied = document.querySelector("#tied");
 
-  win && (win.textContent = `WIN ${newScore[0]}`);
-  loss && (loss.textContent = `LOSS ${newScore[1]}`);
-  tied && (tied.textContent = `TIED ${newScore[2]}`);
+  win && (win.textContent = `${newScore[0]}`);
+  loss && (loss.textContent = `${newScore[1]}`);
+  tied && (tied.textContent = `${newScore[2]}`);
 }
 
 /**
